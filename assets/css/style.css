@@ -1,0 +1,28 @@
+@font-face {
+    font-family: HARRYP__;
+    src: url(fonts/HARRYP__.TTF);
+    }
+
+body {
+    background-image: url("../images/Hallows.png");
+    background-repeat: repeat;
+    font-family: 'Amatic SC', cursive;
+}
+
+h1 {
+    color: #fff;
+    /* padding: 20px; */
+    font-family: 'HARRYP__', cursive;
+    font-size: 130px;
+
+}
+
+.container {
+    background-color: rgba(137, 0, 0, .8);
+    padding: 0 30px;
+    color: #fff;
+    margin: 0 20%;
+    text-align: center;
+    border: 10px dotted goldenrod;
+    font-size: 30px;
+}
