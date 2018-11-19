@@ -5,61 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Harry Potter Trivia⚡&#9889;</title>
-    <script src="assets/css/reset.css"></script>
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Princess+Sofia" rel="stylesheet"> 
+    <title>Harry Potter Trivia</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Wire+One" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="assets/css/fonts/Lightning.ico" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
+    <header id="timer">
+        <h1><strong>Time Remaining: <span id="time"></span></strong></h1>
+    </header> 
 
     <div class="container">
-        <h1>Harry Potter Trivia!</h1>
-        <h2>Time Remaining: <span id="time-remaining"></span></h3>
-        <h3>⚡</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <img src="assets/images/title.png" alt="Harry Potter Trivia">
+                <!-- <h2>Time Remaining: <span id="time"></span></h2> -->
+                <h3>⚡⚡⚡</h3>
+                <br>
 
-        <h3>What is Harry's Middle name?</h3>
-            <form >
-                <input type="radio" name="choice" value="Severus"> Severus
-                <input type="radio" name="choice" value="Jason"> Jason
-                <input type="radio" name="choice" value="James"> James
-                <input type="radio" name="choice" value="Ronald"> Ronald
-            </form>
-        <h3>What language must be spoken to open the Chamber of Secrets?</h3>
-            <form >
-                <input type="radio" name="choice" value="French"> French
-                <input type="radio" name="choice" value="Parselmouth"> Parselmouth
-                <input type="radio" name="choice" value="Parseltongue"> Parseltongue
-                <input type="radio" name="choice" value="Mermish"> Mermish
-            </form>
-        <h3>What was in the core of the Elder Wand?</h3>
-            <form >
-                <input type="radio" name="choice" value="Dragon Heartstring"> Dragon Heartstring
-                <input type="radio" name="choice" value="Thestral tail-hair"> Thestral tail-hair
-                <input type="radio" name="choice" value="Phoenix Tail-feather"> Phoenix tail-feather
-                <input type="radio" name="choice" value="Veela Hair"> Veela Hair
-            </form>
-        <h3>Which symbol represents the first Deathly Hallow that Harry used?</h3>
-            <form >
-                <input type="radio" name="choice" value="Triangle"> Triangle
-                <input type="radio" name="choice" value="Circle"> Circle
-                <input type="radio" name="choice" value="Line"> Line
-                <input type="radio" name="choice" value="Oval"> Oval
-            </form>
-        <h3>Which spell would disarm your opponent?</h3>
-            <form >
-                <input type="radio" name="choice" value="Alohamora"> Alohamora
-                <input type="radio" name="choice" value="Lumos"> Lumos
-                <input type="radio" name="choice" value="Expelliarmus"> Expelliarmus
-                <input type="radio" name="choice" value="Engorgio"> Engorgio
-            </form>
-        <h3></h3>
+                <form id="form1">
+
+                    <h2>What is Harry's Middle name?</h2>
+                    <input type="radio" name="middle" value="0" /> Jason
+                    <input type="radio" name="middle" value="20" /> James
+                    <input type="radio" name="middle" value="0" /> Ronald
+                    <br>
+                    <br>
+                    <h2>What language must be spoken to open the Chamber of Secrets?</h2>
+                    <input type="radio" name="chamber" value="0" /> French
+                    <input type="radio" name="chamber" value="0" /> Parselmouth
+                    <input type="radio" name="chamber" value="20" /> Parseltongue
+                    <br>
+                    <br>
+                    <h2>What was in the core of the Elder Wand?</h2>
+                    <input type="radio" name="elder" value="20" /> Thestral Heartstring
+                    <input type="radio" name="elder" value="0" /> Dragon Heartstring
+                    <input type="radio" name="elder" value="0" /> Phoenix Tailfeather
+                    <br>
+                    <br>
+                    <h2>Which symbol represents the first Deathly Hallow that Harry used?</h2>
+                    <input type="radio" name="hallow" value="20" id="var_string" /> Triangle
+                    <input type="radio" name="hallow" value="0" id="var_join" /> Circle
+                    <input type="radio" name="hallow" value="0" id="var_info" /> Line
+                    <br>
+                    <br>
+                    <h2>Which spell would disarm your opponent?</h2>
+                    <input type="radio" name="spell" value="0" id="var_string" /> Alohamora
+                    <input type="radio" name="spell" value="0" id="var_join" /> Lumos
+                    <input type="radio" name="spell" value="20" id="var_info" /> Expelliarmus
+                    <br>
+                    <br>
+                    <button id="submit" type="submit" value="Submit">Accio Results</button>
+
+                </form>
+
+                <p><span id="grade"></span></p>
+                <p id="grade2"></p>
+            </div>
+        </div>
     </div>
 
 
-
-
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
 
 </body>
 
