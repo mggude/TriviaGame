@@ -32,12 +32,12 @@ function checkScore() {
 
     result = middle + chamber + elder + hallow + spell;
 
-    if (result == 0) { result2 = "You're a muggle!" };
-    if (result == 20) { result2 = "You're a squib!" };
-    if (result == 40) { result2 = "You need to go back to Hogwarts!" };
-    if (result == 60) { result2 = "You're a Wizard!" };
-    if (result == 80) { result2 = "100 points to Gryffindor!" };
-    if (result == 100) { result2 = "You're nominated for Minister of Magic!" };
+    if (result == 0) { result2 = "You're a muggle!<br /><img src='https://media0.giphy.com/media/7RGg0Tg5k0u1G/giphy.gif?cid=3640f6095bf387e84c3863586b124cda' width='100%' />" };
+    if (result == 20) { result2 = "You're a squib!<br /><img src='https://media0.giphy.com/media/Vq2FdyzwkKHEk/giphy.gif?cid=3640f6095bf390bb774b58546757d27f' width='100%' />" };
+    if (result == 40) { result2 = "You need to go back to Hogwarts!<br /><img src='https://media0.giphy.com/media/7RGg0Tg5k0u1G/giphy.gif?cid=3640f6095bf387e84c3863586b124cda' width='100%' />" };
+    if (result == 60) { result2 = "You're a Wizard!<br /><img src='https://media1.giphy.com/media/VwUquCGtIatGg/giphy.gif?cid=3640f6095bf38a93517039754da20db0' width='100%' />" };
+    if (result == 80) { result2 = "You're nominated for Minister of Magic!<br /><img src='https://media3.giphy.com/media/40KXzKllSl6ve/giphy.gif?cid=3640f6095bf39219792f37424dd902eb' width='100%' />" };
+    if (result == 100) { result2 = "100 points to Gryffindor!<br /><img src='https://media1.giphy.com/media/hsBZfDG7wiWHu/giphy.gif?cid=3640f6095bf387c43569444c55b1be07' width='100%' />" };
 }
 
 function decrement() {
