@@ -38,6 +38,7 @@ h1 {
     color: rgba(137, 0, 0, 1);
     padding: 10px;
     z-index: 9;
+    cursor: pointer;
 }
 
 
