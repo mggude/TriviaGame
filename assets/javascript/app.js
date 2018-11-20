@@ -24,17 +24,17 @@ function gameOver() {
 }
 
 function checkScore() {
-    middle = parseInt(document.querySelector('input[name = "middle"]:checked').value);
-    chamber = parseInt(document.querySelector('input[name = "chamber"]:checked').value);
-    elder = parseInt(document.querySelector('input[name = "elder"]:checked').value);
-    hallow = parseInt(document.querySelector('input[name = "hallow"]:checked').value);
-    spell = parseInt(document.querySelector('input[name = "spell"]:checked').value);
+    middle = parseInt(document.querySelector('input[name = "middle"]:checked').value) || 0;
+    chamber = parseInt(document.querySelector('input[name = "chamber"]:checked').value) || 0;
+    elder = parseInt(document.querySelector('input[name = "elder"]:checked').value) || 0;
+    hallow = parseInt(document.querySelector('input[name = "hallow"]:checked').value) || 0;
+    spell = parseInt(document.querySelector('input[name = "spell"]:checked').value) || 0;
 
     result = middle + chamber + elder + hallow + spell;
 
     if (result == 0) { result2 = "You're a muggle!<br /><img src='https://media0.giphy.com/media/7RGg0Tg5k0u1G/giphy.gif?cid=3640f6095bf387e84c3863586b124cda' width='100%' />" };
     if (result == 20) { result2 = "You're a squib!<br /><img src='https://media0.giphy.com/media/Vq2FdyzwkKHEk/giphy.gif?cid=3640f6095bf390bb774b58546757d27f' width='100%' />" };
-    if (result == 40) { result2 = "You need to go back to Hogwarts!<br /><img src='https://media0.giphy.com/media/7RGg0Tg5k0u1G/giphy.gif?cid=3640f6095bf387e84c3863586b124cda' width='100%' />" };
+    if (result == 40) { result2 = "You need to go back to Hogwarts!<br /><img src='https://media2.giphy.com/media/OUwzqE4ZOk5Bm/giphy.gif?cid=3640f6095bf4552b324e684673a0bf9c' width='100%' />" };
     if (result == 60) { result2 = "You're a Wizard!<br /><img src='https://media1.giphy.com/media/VwUquCGtIatGg/giphy.gif?cid=3640f6095bf38a93517039754da20db0' width='100%' />" };
     if (result == 80) { result2 = "You're nominated for Minister of Magic!<br /><img src='https://media3.giphy.com/media/40KXzKllSl6ve/giphy.gif?cid=3640f6095bf39219792f37424dd902eb' width='100%' />" };
     if (result == 100) { result2 = "100 points to Gryffindor!<br /><img src='https://media1.giphy.com/media/hsBZfDG7wiWHu/giphy.gif?cid=3640f6095bf387c43569444c55b1be07' width='100%' />" };
@@ -58,10 +58,11 @@ function stop() {
 }
 
 document.getElementById("form1").onsubmit = function () {
+    event.preventDefault();
     checkScore();
     $("#grade").html("YOUR SCORE: " + result);
     $("#grade2").html(result2);
     gameOver();
 
-    return false;
+    // return false;
 }
